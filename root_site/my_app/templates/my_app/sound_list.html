@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load tz %}
+
+{% load static %} 
+
+{% block title %}
+ Список записів 
+{%endblock title %} 
+
+{% block css_styles %}
+<link rel="stylesheet" href="{% static 'my_app/sound_list.css' %}" />
+{% endblock css_styles %}
+
+{% block content %}
+<div class="container">
+  <div class="grid-con">
+    {% for post in sounds %}
+    <a href="{% url 'detail' post.slug %}">
+      <div class="grid-item">
+        <div class="card">
+          <div class="card-header">
+            <h1>{{post.title}}</h1>
+          </div>
+          <div class="card-body">
+            <p>{{post.text|truncatewords:15}}</p>
+            {% timezone "Europe/Kyiv" %}
+            <p class='text-end'>Створено: {{post.created_at|date:"d/m/Y H:i"}}</p>
+            {% endtimezone %}
+          </div>
+        </div>
+      </div>
+    </a>
+    <br />
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

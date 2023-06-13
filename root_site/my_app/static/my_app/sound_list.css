@@ -1,0 +1,25 @@
+.grid-con {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-item {
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+}
+
+.grid-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+audio {
+  width: 100%;
+}

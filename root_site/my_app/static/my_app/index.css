@@ -1,0 +1,35 @@
+.title{
+    background-color: #4b4b4b;
+    border-radius: 15px 15px 0 0;
+    margin-top: 3rem;
+    padding: 1rem;
+    color: #ccc;
+    width: 100%;
+    
+}
+
+.my-con{
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    border-radius: 0 0 15px 15px;
+    min-height: 30rem;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+.main-text{
+    color:#e8e8e8;
+}
+
+.module-list{
+    font-size: 20px;
+}
+
+.info{
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}

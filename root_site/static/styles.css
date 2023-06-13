@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap");
+
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+body{
+  background: #c1c1c1;
+  background: linear-gradient(90deg, #c1c1c1 0%, #787878 51%, #c1c1c1 100%);
+}
+
+.errorlist{
+  color: #DC3545;
+}
+
+.nav-text{
+  color:#fff;
+}

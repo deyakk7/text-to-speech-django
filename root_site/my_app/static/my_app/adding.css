@@ -1,0 +1,24 @@
+.my-button {
+  background: rgb(73, 73, 73);
+  background: linear-gradient(90deg, #494949 0%, #222222 50%, #494949 100%);
+  padding: 1rem 3rem;
+  color: #c1c1c1;
+  transition: all 0.3s ease-in-out;
+}
+
+.my-button:hover {
+  background: rgb(73, 73, 73);
+  background: linear-gradient(90deg, #222222 0%, #494949 50%, #222222 100%);
+    color: #c1c1c1;
+
+
+  text-decoration: none;
+  transform: scale(1.2);
+}
+
+option {
+  border-radius: 50%;
+}
+.add-text{
+    color: #fbfbfb;
+}

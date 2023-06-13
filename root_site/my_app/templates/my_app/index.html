@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block title %} 
+Головна сторінка
+{% endblock title %} 
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static 'my_app/index.css' %}" />
+{% endblock css_styles %} 
+
+{% block content %}
+<div class="container">
+  <div class="title">
+    <h1 class="text-center main-text">
+      Курсова робота на тему:<br />
+      <span style="font-style: italic"
+        >"Розробка інформаційної системи для зберігання і озвучення слів та
+        текстів"</span
+      >
+    </h1>
+  </div>
+  <div class="my-con">
+    <h4 class='m-5'>
+        Сайт написаний за допомогою фреймворку Django з використанням таких додаткових модулів:<br>
+    </h4>
+    <hr>
+    <h5 class='module-list m-5'>
+        gtts - для озвучення тексту<br>
+        pytils - для транслітерації тексту (Кирилиці) <br>
+    </h5>
+    <hr>
+    <h3 class='text-end m-4 info'>
+        Виконав студент 2 курсу<br>Спеціальність: Комп'ютерні науки(ІНФ)<br>
+        Деяк Євгеній Віталійович
+    </h3>
+  </div>
+</div>
+{% endblock content %}

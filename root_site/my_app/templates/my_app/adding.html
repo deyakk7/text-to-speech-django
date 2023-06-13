@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Добавити{% endblock title %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static 'my_app/adding.css' %}">
+{% endblock css_styles %}
+
+
+
+{% block content %}
+    <div class="container">
+        <h1 class="mt-5 mb-5 add-text" align="center">Добавлення запису</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-row mt-4">
+                {% for field in form %}
+                
+                    <div class="col">
+                        {% if "Назва" in field.label_tag %}
+                        {% if error %}
+                        <p class="text-danger">Такий запис вже існує</p>
+                        
+                        {% endif %}
+                        {% endif %}
+                        
+                        {% if "Мова" in field.label_tag %}
+                        <p>Виберіть мову озвучення</p>
+                        {% endif %}
+                        {{field}}
+                        {{field.errors}}
+                    </div>
+                    <br>
+                {% endfor %}
+            </div>
+            <div class="container text-center">
+            <input type="submit" class="btn mt-3 my-button" value="Добавити">
+        </div>
+        </form>
+        <h3 class="text-lg-center">{{trans}}</h3>
+    </div>
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load tz %}
+{% load static %}
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static 'my_app/sound_detail.css' %}">
+{% endblock css_styles %}
+
+{% block title %}{{object.title}}{% endblock title %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="grid-item">
+            <div class="card">
+            <div class="card-header">
+                <h1 class='text-end title'>{{object.title}}</h1>
+                {% timezone "Europe/Kyiv" %}
+                <p class='text-end'>Створено: {{object.created_at|date:"d/m/Y H:i:s"}}</p>
+                {% endtimezone %}
+            </div>
+            <div class="card-body">
+                <p>{{object.text}}</p>
+                <div class="card-footer">
+                    <p>Запис мовою: {{object.lang.name}}</p>
+                    <audio src="{{object.audio}}" controls></audio>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
